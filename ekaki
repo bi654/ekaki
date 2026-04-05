@@ -1,0 +1,4 @@
+<body style=margin:0;background:#222;display:grid;place-items:center;height:100vh;touch-action:none><input id=k type=color style=width:90vmin><canvas id=c style="width:90vmin;height:90vmin;background:#fff;image-rendering:pixelated;cursor:crosshair"><script>
+d=c.getContext('2d'),c.width=c.height=32,f=(e,m)=>{if(m||e.buttons&1||e.touches){p=c.getBoundingClientRect();t=e.touches?.[0]||e;d.fillStyle=(e.ctrlKey||e.touches?.length>1)?'#fff':k.value;d.fillRect((t.clientX-p.left)/(p.width/32)|0,(t.clientY-p.top)/(p.width/32)|0,1,1)}};
+c.onmousemove=c.ontouchmove=f,c.onmousedown=c.ontouchstart=e=>f(e,1),oncontextmenu=e=>e.preventDefault()
+</script>
